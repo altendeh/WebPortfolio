@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Player - Detail</title>
+    <meta name="description" content="Listen to your favorite radio stations with our Radio Player.">
+    <meta name="keywords" content="radio, player, music, online radio">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-radio"></i> Radio Player</h1>
+        <button id="mode-toggle" class="control-button" aria-label="Toggle Light/Dark Mode"></button>
+    </header>
+    
+    <main>
+        <div class="song-info-box">
+            <img id="selected-radio-icon" class="radio-icon" alt="Radio Icon" aria-label="Radio Icon">
+            <h2 id="selected-radio-name" aria-label="Radio Name"></h2>
+            <p id="selected-radio-country" aria-label="Radio Country"></p>
+            <p id="selected-radio-genre" aria-label="Radio Genre"></p>
+        </div>
+        <div class="audio-controls">
+            <button id="play-button" class="control-button" aria-label="Play Button"><i class="fas fa-play"></i></button>
+            <label for="volume-slider" class="control-label">
+                <i id="volume-icon" class="fas fa-volume-up"></i>
+            </label>
+            <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1" class="control-slider" aria-label="Volume Slider">
+            <span id="volume-level">100%</span>
+        </div>
+        <button id="back-button" class="back-button" aria-label="Back Button">
+            <i class="fas fa-arrow-left"></i>
+            <span class="back-text">Zurück zur Senderauswahl</span>
+        </button>
+    </main>
+    <footer>
+        <p>2024 Radio Player.</p>
+    </footer>    
+    <script src="radio.js"></script>
+</body>
+</html>

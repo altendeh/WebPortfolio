@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Player</title>
+    <meta name="description" content="Listen to your favorite radio stations with our Radio Player.">
+    <meta name="keywords" content="radio, player, music, online radio">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-radio"></i> Radio Player</h1>
+        <button id="mode-toggle" class="control-button" aria-label="Toggle Light/Dark Mode"></button>
+        
+    </header>
+    <main>
+        <div class="filter-container">
+            <div class="filter">
+                <label for="country-select">Wähle ein Land:</label>
+                <select id="country-select" aria-label="Country Select">
+                    <option value="">Alle Länder</option>
+                    <option value="Germany">Deutschland</option>
+                    <option value="United States">USA</option>
+                    <option value="France">Frankreich</option>
+                    <option value="United Kingdom">Vereinigtes Königreich</option>
+                    <option value="Italy">Italien</option>
+                    <option value="Spain">Spanien</option>
+                    <option value="Canada">Kanada</option>
+                    <option value="Australia">Australien</option>
+                    <!-- Weitere Länder hinzufügen -->
+                </select>
+            </div>
+            <div class="filter">
+                <label for="tag-select">Wähle ein Genre:</label>
+                <select id="tag-select" aria-label="Tag Select">
+                    <option value="">Alle Genres</option>
+                    <option value="rock">Rock</option>
+                    <option value="jazz">Jazz</option>
+                    <option value="pop">Pop</option>
+                    <option value="classical">Klassik</option>
+                    <option value="hip-hop">Hip-Hop</option>
+                    <option value="electronic">Elektronisch</option>
+                    <option value="country">Country</option>
+                    <option value="reggae">Reggae</option>
+                    <!-- Weitere Genres hinzufügen -->
+                </select>
+            </div>
+            <div class="filter">
+                <label for="search-input">Suche nach Radiosender:</label>
+                <input type="text" id="search-input" placeholder="Radiosender eingeben..." aria-label="Search Input">
+            </div>
+            <button id="search-button" aria-label="Search Button"><i class="fas fa-search"></i> Suchen</button>
+        </div>
+        <div id="loading" class="hidden">
+            <div class="spinner" aria-label="Loading Spinner"></div>
+            <p>Lade Radiosender...</p>
+        </div>
+        <div id="radio-list" class="hidden" aria-label="Radio List"></div>
+    </main>
+    <footer>
+        <p>2024 Radio Player.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
