@@ -168,7 +168,11 @@ body.light-mode #search-input {
     animation: fadeIn 1s ease-in-out;
     gap: 10px;
     appearance: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 
 body.light-mode .radio-item {
     background-color: #fff;
