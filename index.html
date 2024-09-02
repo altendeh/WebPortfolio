@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+    <!-- Metadaten für die Webseite -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Radio Player</title>
     <meta name="description" content="Listen to your favorite radio stations with our Radio Player.">
     <meta name="keywords" content="radio, player, music, online radio">
+    <!-- Einbindung der CSS-Datei für das Styling -->
     <link rel="stylesheet" href="style.css">
+    <!-- Einbindung der Font Awesome Bibliothek für Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <header>
+        <!-- Titel und Icon des Radio Players -->
         <h1><i class="fas fa-radio"></i> Radio Player</h1>
+        <!-- Button zum Umschalten zwischen Hell- und Dunkelmodus -->
         <button id="mode-toggle" class="control-button" aria-label="Toggle Light/Dark Mode"></button>
-        
     </header>
     <main>
+        <!-- Container für die Filteroptionen -->
         <div class="filter-container">
             <div class="filter">
+                <!-- Dropdown zur Auswahl des Landes -->
                 <label for="country-select">Wähle ein Land:</label>
                 <select id="country-select" aria-label="Country Select">
                     <option value="">Alle Länder</option>
@@ -33,6 +39,7 @@
                 </select>
             </div>
             <div class="filter">
+                <!-- Dropdown zur Auswahl des Genres -->
                 <label for="tag-select">Wähle ein Genre:</label>
                 <select id="tag-select" aria-label="Tag Select">
                     <option value="">Alle Genres</option>
@@ -48,20 +55,26 @@
                 </select>
             </div>
             <div class="filter">
+                <!-- Suchfeld zur Eingabe des Radiosendernamens -->
                 <label for="search-input">Suche nach Radiosender:</label>
                 <input type="text" id="search-input" placeholder="Radiosender eingeben..." aria-label="Search Input">
             </div>
+            <!-- Suchbutton -->
             <button id="search-button" aria-label="Search Button"><i class="fas fa-search"></i> Suchen</button>
         </div>
+        <!-- Ladeanzeige -->
         <div id="loading" class="hidden">
             <div class="spinner" aria-label="Loading Spinner"></div>
             <p>Lade Radiosender...</p>
         </div>
+        <!-- Liste der Radiosender -->
         <div id="radio-list" class="hidden" aria-label="Radio List"></div>
     </main>
     <footer>
+        <!-- Fußzeile mit Copyright-Informationen -->
         <p>2024 Radio Player.</p>
     </footer>
+    <!-- Einbindung der JavaScript-Datei für die Funktionalität -->
     <script src="script.js"></script>
 </body>
 </html>
