@@ -73,16 +73,6 @@ Benutzer können Radiosender nach Land und Genre filtern. Zusätzlich gibt es ei
 
 Auf der Detailseite eines ausgewählten Radiosenders können Benutzer die Wiedergabe starten oder pausieren und die Lautstärke anpassen. Es gibt auch ein Lautstärke-Icon, das die Lautstärke stumm schalten oder wiederherstellen kann.
 
-## Anleitung zur Nutzung des Radio Players
-
-1. **Startseite aufrufen**: Öffnen Sie die `index.html`-Datei in einem Webbrowser.
-2. **Radiosender filtern**: Wählen Sie ein Land und/oder ein Genre aus den Dropdown-Menüs aus oder geben Sie den Namen eines Radiosenders in das Suchfeld ein.
-3. **Radiosender suchen**: Klicken Sie auf den Suchbutton oder drücken Sie die Eingabetaste, um die Suche zu starten.
-4. **Radiosender auswählen**: Klicken Sie auf einen Radiosender in der Liste, um zur Detailseite zu gelangen.
-5. **Radiosender abspielen**: Klicken Sie auf den Play-Button, um die Wiedergabe zu starten. Verwenden Sie den Lautstärkeregler, um die Lautstärke anzupassen.
-6. **Modus wechseln**: Klicken Sie auf den Modus-Button im Header, um zwischen Hell- und Dunkelmodus zu wechseln.
-7. **Zurück zur Senderauswahl**: Klicken Sie auf den Zurück-Button, um zur Hauptseite zurückzukehren und einen anderen Sender auszuwählen.
-
 ## Technische Hintergründe
 
 ### Nutzung von Session Storage
@@ -178,5 +168,15 @@ Die Audiosteuerung ermöglicht das Abspielen, Pausieren und Anpassen der Lautst�
 2. **Play/Pause**: Ein Event-Listener wird dem Play-Button hinzugefügt, um die Wiedergabe zu starten oder zu pausieren.
 3. **Lautstärkeregler**: Ein Event-Listener wird dem Lautstärkeregler hinzugefügt, um die Lautstärke des Audio-Elements anzupassen.
 4. **Lautstärke-Icon**: Ein Event-Listener wird dem Lautstärke-Icon hinzugefügt, um die Lautstärke stummzuschalten oder wiederherzustellen.
+
+## Anleitung zur Nutzung des Radio Players
+
+1. **Startseite aufrufen**: Öffnen Sie die `index.html`-Datei in einem Webbrowser.
+2. **Radiosender filtern**: Wählen Sie ein Land und/oder ein Genre aus den Dropdown-Menüs aus oder geben Sie den Namen eines Radiosenders in das Suchfeld ein.
+3. **Radiosender suchen**: Klicken Sie auf den Suchbutton oder drücken Sie die Eingabetaste, um die Suche zu starten.
+4. **Radiosender auswählen**: Klicken Sie auf einen Radiosender in der Liste, um zur Detailseite zu gelangen.
+5. **Radiosender abspielen**: Klicken Sie auf den Play-Button, um die Wiedergabe zu starten. Verwenden Sie den Lautstärkeregler, um die Lautstärke anzupassen.
+6. **Modus wechseln**: Klicken Sie auf den Modus-Button im Header, um zwischen Hell- und Dunkelmodus zu wechseln.
+7. **Zurück zur Senderauswahl**: Klicken Sie auf den Zurück-Button, um zur Hauptseite zurückzukehren und einen anderen Sender auszuwählen.
 
 Viel Spaß beim Hören Ihrer Lieblingsradiosender!
