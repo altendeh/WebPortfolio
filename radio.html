@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+    <!-- Metadaten für die Webseite -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Radio Player - Detail</title>
     <meta name="description" content="Listen to your favorite radio stations with our Radio Player.">
     <meta name="keywords" content="radio, player, music, online radio">
+    <!-- Einbindung der CSS-Datei für das Styling -->
     <link rel="stylesheet" href="style.css">
+    <!-- Einbindung der Font Awesome Bibliothek für Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <header>
+        <!-- Titel und Icon des Radio Players -->
         <h1><i class="fas fa-radio"></i> Radio Player</h1>
+        <!-- Button zum Umschalten zwischen Hell- und Dunkelmodus -->
         <button id="mode-toggle" class="control-button" aria-label="Toggle Light/Dark Mode"></button>
     </header>
     
     <main>
+        <!-- Box zur Anzeige der Informationen des ausgewählten Radiosenders -->
         <div class="song-info-box">
             <img id="selected-radio-icon" class="radio-icon" alt="Radio Icon" aria-label="Radio Icon">
             <h2 id="selected-radio-name" aria-label="Radio Name"></h2>
             <p id="selected-radio-country" aria-label="Radio Country"></p>
             <p id="selected-radio-genre" aria-label="Radio Genre"></p>
         </div>
+        <!-- Steuerungselemente für die Audiowiedergabe -->
         <div class="audio-controls">
             <button id="play-button" class="control-button" aria-label="Play Button"><i class="fas fa-play"></i></button>
             <label for="volume-slider" class="control-label">
@@ -30,14 +37,17 @@
             <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1" class="control-slider" aria-label="Volume Slider">
             <span id="volume-level">100%</span>
         </div>
+        <!-- Button zur Rückkehr zur Senderauswahl -->
         <button id="back-button" class="back-button" aria-label="Back Button">
             <i class="fas fa-arrow-left"></i>
             <span class="back-text">Zurück zur Senderauswahl</span>
         </button>
     </main>
     <footer>
+        <!-- Fußzeile mit Copyright-Informationen -->
         <p>2024 Radio Player.</p>
     </footer>    
+    <!-- Einbindung der JavaScript-Datei für die Funktionalität -->
     <script src="radio.js"></script>
 </body>
 </html>

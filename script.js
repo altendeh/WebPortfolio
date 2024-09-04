@@ -1,3 +1,4 @@
+// Elemente aus dem DOM abrufen
 const radioList = document.getElementById('radio-list');
 const countrySelect = document.getElementById('country-select');
 const tagSelect = document.getElementById('tag-select');
@@ -6,13 +7,17 @@ const searchInput = document.getElementById('search-input');
 const loading = document.getElementById('loading');
 const modeToggle = document.getElementById('mode-toggle');
 
+// Event-Listener für den Suchbutton hinzufügen
 searchButton.addEventListener('click', fetchRadios);
+
+// Event-Listener für die Eingabetaste im Suchfeld hinzufügen
 searchInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
         fetchRadios();
     }
 });
 
+// Event-Listener für das Laden des Dokuments hinzufügen
 document.addEventListener('DOMContentLoaded', () => {
     const savedRadios = sessionStorage.getItem('radios');
     if (savedRadios) {
@@ -22,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setMode(mode);
 });
 
+// Event-Listener für das Laden des Dokuments hinzufügen
 document.addEventListener('DOMContentLoaded', () => {
     const modeToggle = document.getElementById('mode-toggle');
     const currentMode = sessionStorage.getItem('mode') || 'dark';
@@ -51,9 +57,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-
+// Funktion zum Abrufen der Radiosender
 async function fetchRadios() {
-    // Clear session storage and displayed radio stations when a new search is started
+    // Session Storage und angezeigte Radiosender löschen, wenn eine neue Suche gestartet wird
     sessionStorage.removeItem('radios');
     sessionStorage.removeItem('selectedRadio');
     radioList.innerHTML = '';
@@ -73,10 +79,10 @@ async function fetchRadios() {
         url = `https://de1.api.radio-browser.info/json/stations/bytag/${tag}`;
     }
 
-    console.log('Fetching radios from URL:', url); // Log URL for debugging
+    console.log('Fetching radios from URL:', url); // URL zur Fehlersuche protokollieren
 
     radioList.classList.add('hidden');
-    loading.classList.remove('hidden'); // Show loading animation
+    loading.classList.remove('hidden'); // Ladeanimation anzeigen
 
     try {
         const response = await fetch(url);
@@ -84,17 +90,17 @@ async function fetchRadios() {
             throw new Error('Network response was not ok');
         }
         const data = await response.json();
-        console.log('Fetched data:', data); // Log data for debugging
+        console.log('Fetched data:', data); // Daten zur Fehlersuche protokollieren
 
         if (data.length === 0) {
             throw new Error('No radio stations found for the given filters.');
         }
 
-        // Store only necessary information and limit to 10 radio stations
+        // Nur notwendige Informationen speichern und auf 10 Radiosender begrenzen
         const minimalData = data.slice(0, 10).map(radio => ({
             name: radio.name,
             url_resolved: radio.url_resolved,
-            favicon: radio.favicon || 'default-icon.png', // Use default icon if none available
+            favicon: radio.favicon || 'default-icon.png', // Standard-Icon verwenden, falls keines verfügbar ist
             country: radio.country,
             genre: radio.tags
         }));
@@ -104,16 +110,17 @@ async function fetchRadios() {
         console.error('There was a problem with the fetch operation:', error);
         radioList.textContent = 'Es gab ein Problem beim Abrufen der Radiosender. Bitte versuchen Sie es später erneut.';
     } finally {
-        loading.classList.add('hidden'); // Hide loading animation
+        loading.classList.add('hidden'); // Ladeanimation ausblenden
         radioList.classList.remove('hidden');
     }
 }
 
+// Funktion zum Anzeigen der Radiosender
 function displayRadios(radios, searchTerm) {
-    radioList.innerHTML = ''; // Clear previous list
+    radioList.innerHTML = ''; // Vorherige Liste löschen
     const filteredRadios = radios.filter(radio => radio.name.toLowerCase().includes(searchTerm));
     if (filteredRadios.length === 0) {
-        radioList.textContent = 'Keine Radiosender gefunden.'; // Message if no stations found
+        radioList.textContent = 'Keine Radiosender gefunden.'; // Nachricht, wenn keine Sender gefunden wurden
         return;
     }
     filteredRadios.forEach(radio => {

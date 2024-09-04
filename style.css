@@ -1,4 +1,5 @@
 :root {
+    /* Farbvariablen für den Hell- und Dunkelmodus */
     --background-color-dark: #121212;
     --background-color-light: #ffffff;
     --text-color-dark: #ffffff;
@@ -13,6 +14,7 @@
 }
 
 body {
+    /* Grundlegende Stile für den Body */
     font-family: 'Arial', sans-serif;
     background-color: var(--background-color-dark);
     color: var(--text-color-dark);
@@ -25,11 +27,13 @@ body {
 }
 
 body.light-mode {
+    /* Stile für den Hellmodus */
     background-color: var(--background-color-light);
     color: var(--text-color-light);
 }
 
 header {
+    /* Stile für den Header */
     background-color: var(--primary-color-dark);
     color: white;
     padding: 20px;
@@ -42,21 +46,25 @@ header {
 }
 
 header.light-mode {
+    /* Stile für den Header im Hellmodus */
     background-color: var(--primary-color-light);
 }
 
 header h1 {
+    /* Stile für den Titel im Header */
     margin: 0;
     font-size: 2em;
     animation: fadeIn 1s ease-in-out;
 }
 
 @keyframes fadeIn {
+    /* Animation für das Einblenden des Titels */
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
 main {
+    /* Stile für den Hauptbereich */
     flex: 1;
     padding: 20px;
     text-align: center;
@@ -69,6 +77,7 @@ main {
 }
 
 .filter-container {
+    /* Stile für den Filtercontainer */
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -83,6 +92,7 @@ main {
 body.light-mode .filter-container,
 body.light-mode .audio-controls,
 body.light-mode .song-info-box {
+    /* Stile für den Filtercontainer, die Audiosteuerung und die Song-Info-Box im Hellmodus */
     background-color: rgba(255, 255, 255, 0.8);
     color: var(--text-color-light);
 }
@@ -90,18 +100,21 @@ body.light-mode .song-info-box {
 body.dark-mode .filter-container,
 body.dark-mode .audio-controls,
 body.dark-mode .song-info-box {
+    /* Stile für den Filtercontainer, die Audiosteuerung und die Song-Info-Box im Dunkelmodus */
     background-color: #333;
     color: var(--text-color-dark);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .filter {
+    /* Stile für die einzelnen Filter */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 #country-select, #tag-select, #search-input {
+    /* Stile für die Dropdowns und das Suchfeld */
     margin-top: 10px;
     padding: 10px;
     font-size: 1em;
@@ -117,15 +130,18 @@ body.dark-mode .song-info-box {
 body.light-mode #country-select,
 body.light-mode #tag-select,
 body.light-mode #search-input {
+    /* Stile für die Dropdowns und das Suchfeld im Hellmodus */
     background-color: #fff;
     color: #000;
 }
 
 #country-select:hover, #tag-select:hover, #search-input:hover {
+    /* Hover-Effekte für die Dropdowns und das Suchfeld */
     box-shadow: 0 0 10px var(--button-hover-glow);
 }
 
 #search-button {
+    /* Stile für den Suchbutton */
     padding: 10px 20px;
     font-size: 1em;
     background-color: var(--primary-color-dark);
@@ -139,12 +155,14 @@ body.light-mode #search-input {
 }
 
 #search-button:hover {
+    /* Hover-Effekte für den Suchbutton */
     background-color: #1AA34A;
     transform: scale(1.05);
     box-shadow: 0 0 10px var(--button-hover-glow);
 }
 
 #radio-list {
+    /* Stile für die Liste der Radiosender */
     margin: 20px auto;
     max-width: 600px;
     display: flex;
@@ -155,6 +173,7 @@ body.light-mode #search-input {
 }
 
 .radio-item {
+    /* Stile für die einzelnen Radiosender */
     padding: 15px;
     margin: 10px;
     background-color: #333;
@@ -173,25 +192,28 @@ body.light-mode #search-input {
     justify-content: center;
 }
 
-
 body.light-mode .radio-item {
+    /* Stile für die einzelnen Radiosender im Hellmodus */
     background-color: #fff;
     border: 1px solid #ccc;
 }
 
 .radio-item:hover {
+    /* Hover-Effekte für die einzelnen Radiosender */
     background-color: #444;
     transform: scale(1.05);
     box-shadow: 0 0 10px var(--button-hover-glow);
 }
 
 .radio-item img.radio-icon {
+    /* Stile für die Icons der Radiosender */
     width: 30px;
     height: 30px;
     border-radius: 50%;
 }
 
 .audio-controls {
+    /* Stile für die Audiosteuerung */
     margin: 20px auto;
     padding: 20px;
     display: flex;
@@ -205,6 +227,7 @@ body.light-mode .radio-item {
 }
 
 .control-button {
+    /* Stile für die Steuerungsknöpfe */
     background: linear-gradient(135deg, #1DB954, #1AA34A);
     color: white;
     border: none;
@@ -221,16 +244,19 @@ body.light-mode .radio-item {
 }
 
 .control-button i {
+    /* Stile für die Icons der Steuerungsknöpfe */
     font-size: 1.5em;
 }
 
 .control-button:hover {
+    /* Hover-Effekte für die Steuerungsknöpfe */
     background: linear-gradient(135deg, #1AA34A, #1DB954);
     transform: scale(1.1);
     box-shadow: 0 0 15px var(--button-hover-glow);
 }
 
 .control-label {
+    /* Stile für die Lautstärkeregelung */
     font-size: 1em;
     color: #fff;
     margin-left: 20px;
@@ -238,14 +264,17 @@ body.light-mode .radio-item {
 }
 
 body.light-mode .control-label {
+    /* Stile für die Lautstärkeregelung im Hellmodus */
     color: #000;
 }
 
 .control-label:hover i {
+    /* Hover-Effekte für das Lautstärke-Icon */
     color: var(--primary-color-dark);
 }
 
 .control-slider {
+    /* Stile für den Lautstärkeregler */
     appearance: none;
     max-width: 200px;
     height: 10px;
@@ -256,6 +285,7 @@ body.light-mode .control-label {
 }
 
 .control-slider::-webkit-slider-thumb {
+    /* Stile für den Schieberegler im Webkit-Browser */
     appearance: none;
     max-width: 20px;
     height: 20px;
@@ -267,6 +297,7 @@ body.light-mode .control-label {
 }
 
 .control-slider::-moz-range-thumb {
+    /* Stile für den Schieberegler im Mozilla-Browser */
     max-width: 20px;
     height: 20px;
     background: var(--slider-thumb-color);
@@ -277,16 +308,19 @@ body.light-mode .control-label {
 }
 
 .control-slider:hover::-webkit-slider-thumb {
+    /* Hover-Effekte für den Schieberegler im Webkit-Browser */
     background: var(--slider-thumb-hover-color);
     transform: scale(1.1);
 }
 
 .control-slider:hover::-moz-range-thumb {
+    /* Hover-Effekte für den Schieberegler im Mozilla-Browser */
     background: var(--slider-thumb-hover-color);
     transform: scale(1.1);
 }
 
 .back-button {
+    /* Stile für den Zurück-Button */
     position: absolute;
     top: 10px;
     left: 10px;
@@ -302,24 +336,29 @@ body.light-mode .control-label {
 }
 
 .back-button .back-text {
+    /* Stile für den Text im Zurück-Button */
     display: none;
     margin-left: 10px;
 }
 
 .back-button:hover .back-text {
+    /* Hover-Effekte für den Text im Zurück-Button */
     display: inline;
 }
 
 .back-button:hover {
+    /* Hover-Effekte für den Zurück-Button */
     background-color: #ffffff;
 }
 
 body.dark-mode .back-button {
+    /* Stile für den Zurück-Button im Dunkelmodus */
     background-color: #333;
     color: #ffffff;
 }
 
 footer {
+    /* Stile für die Fußzeile */
     background-color: var(--primary-color-dark);
     color: white;
     text-align: center;
@@ -328,36 +367,43 @@ footer {
 }
 
 body.light-mode footer {
+    /* Stile für die Fußzeile im Hellmodus */
     background-color: var(--primary-color-light);
 }
 
 /* Media Query für mobile Geräte */
 @media (max-width: 600px) {
     .filter-container {
+        /* Stile für den Filtercontainer auf mobilen Geräten */
         flex-direction: column;
         align-items: center;
         padding: 10px;
     }
 
     .filter {
+        /* Stile für die Filter auf mobilen Geräten */
         width: 100%;
         margin-bottom: 10px;
     }
 
     #radio-list {
+        /* Stile für die Liste der Radiosender auf mobilen Geräten */
         align-items: center;
     }
 
     .radio-item {
+        /* Stile für die einzelnen Radiosender auf mobilen Geräten */
         width: 90%;
         align-self: center;
     }
 
     .audio-player {
+        /* Stile für den Audioplayer auf mobilen Geräten */
         padding: 10px;
     }
 
     .audio-controls {
+        /* Stile für die Audiosteuerung auf mobilen Geräten */
         width: 90%;
         align-content: center;
         display: flex;
@@ -366,6 +412,7 @@ body.light-mode footer {
     }
 
     .song-info-box {
+        /* Stile für die Song-Info-Box auf mobilen Geräten */
         width: 90%;
         height: auto;
         padding: 10px;
@@ -374,15 +421,18 @@ body.light-mode footer {
 }
 
 .hidden {
+    /* Stile für versteckte Elemente */
     display: none;
 }
 
 #loading {
+    /* Stile für die Ladeanzeige */
     text-align: center;
     margin-top: 20px;
 }
 
 .spinner {
+    /* Stile für den Lade-Spinner */
     border: 4px solid rgba(0, 0, 0, 0.1);
     border-top: 4px solid #1DB954;
     border-radius: 50%;
@@ -393,16 +443,19 @@ body.light-mode footer {
 }
 
 @keyframes spin {
+    /* Animation für den Lade-Spinner */
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
 
 #selected-radio {
+    /* Stile für den ausgewählten Radiosender */
     text-align: center;
     margin-top: 20px;
 }
 
 #selected-radio img.radio-icon {
+    /* Stile für das Icon des ausgewählten Radiosenders */
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -410,11 +463,13 @@ body.light-mode footer {
 }
 
 #selected-radio h2 {
+    /* Stile für den Namen des ausgewählten Radiosenders */
     font-size: 1.5em;
     margin-bottom: 20px;
 }
 
 .song-info-box {
+    /* Stile für die Song-Info-Box */
     background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 10px;
@@ -431,6 +486,7 @@ body.light-mode footer {
 }
 
 .song-info-box img.radio-icon {
+    /* Stile für das Icon in der Song-Info-Box */
     width: 100px;
     height: 100px;
     border-radius: 5px;
@@ -438,10 +494,12 @@ body.light-mode footer {
 }
 
 .song-info-box h2 {
+    /* Stile für den Namen in der Song-Info-Box */
     font-size: 1.5em;
     margin-bottom: 10px;
 }
 
 .song-info-box p {
+    /* Stile für die Beschreibung in der Song-Info-Box */
     margin: 5px 0;
 }
