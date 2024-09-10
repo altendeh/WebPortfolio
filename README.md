@@ -14,6 +14,29 @@ Der Radio Player ist eine Webanwendung, die es Benutzern ermöglicht, ihre Liebl
 6. **Modus wechseln**: Klicken Sie auf den Modus-Button im Header, um zwischen Hell- und Dunkelmodus zu wechseln.
 7. **Zurück zur Senderauswahl**: Klicken Sie auf den Zurück-Button, um zur Hauptseite zurückzukehren und einen anderen Sender auszuwählen.
 
+## Vorgehen
+Zunächst wurde überlegt,welche Funktionalität die Web-Anwendung abbilden soll. Dazu wurden verschiedene Möglichkeite gefunden, die als Web-Anwendung abgebildet werden können. Nach der Entscheidung für einen Radio Player wurden Anforderungen formuliert, damit der Radio Player von Benutzern genutzt werden kann. Dies wurde in Form eines Brainstormings durchgeführt und andere Radio- und Musikanwendungen wurden verglichen. 
+Daraus ergab sich der Aufbau und die Funktionen der Anwendung. Die Anwendung ist in zwei Seiten aufgeteilt. Auf der ersten Seite gibt es die Möglichkeit nach Raiosendern zu suchen oder diese nach einem Genre und Land zu filtern. Als Ausgabe gibt es eine Liste, die die Top 10 Ergebnisse enthält. Durch das Anklicken eines Radiosenders wird die zweite Seite geöffnet, diese bietet Möglichkeiten die Lautstärke anzupassen und das Abspielen zu pausieren. Die Seite enthält Informationen über den Radio Sender, wie das Land, das Genre und enthält ebenfalls falls vorhanden das Icon/Bild des Radiosenders.
+Zudem kann über einen Zurück-Pfeil wieder zur ersten Seite navigiert werden.
+Das sind die grundlegenden Funktionen der Web-Anwendung, die geplant sind.
+Bei der Implementierung wurde die Anwendung zunächst für Desktops programmiert. Es wurden dabei zunächst das Hauptmenü mit den Filter- und Suchfunktionen implementiert. Dazu musste zunächst auch der Abruf der Radiosender in Java Script programmiert werden. Nach der Implementierung der Funktionen wurde der Aufbau der Seite angepasst, damit diese ansprechender für Benutzer ist. Im nächsten Schritt wurden  die Funktionen der zweiten Seite implementiert und das Design angepasst. Nachdem das Grundgerüst der Anwendung gebaut war, wurde ein Dunkel-/Hellmodus eingefügt.
+Bei der ersten Implementierung mussten die Radiosender nach jeder Rückkehr auf die Hauptseite neu geladen werden. Mit Hilfe eines Session Storage wird dieses Problem umgangen,sodass die Radiosender bis zum Ende der Sitzung abgespeichert bleiben.
+Im letzen Schritt wurden Media Queries hinzugefügt, sodass die Anwendung responsive für Geräte mit kleinerem Bildschirm sind.
+
+## Herausforderung
+
+### Implementieren des Hell- Dunkelmodus 
+Bei der Implementierung des Hell-Dunkelmodus lag das Problem vor, dass nicht die passenden Farben bzw. die passenden Icons angezeigt wurden. Wenn der Dunkelmodus aktiviert war, war das Design hell und das Zeichen des Buttons zum Umschalten des Modus falsch. Zudem funktioniert die ursprünglich festgelegten und erstellten Designs nicht. Dabei wurde zum Beispiel das Icon des Radiosenders nicht mehr angezigt.
+
+### Fehler bei der Filteroption 
+Beim Filtern nach einem Genre lag zunächst das Problem vor, das egal welches Genre ausgewählt wurde, kein Radiosender angezeigt wurde. Das Problem lag daran, das das Genre des Radiosenders nicht über den Begriff Genre definiert war, sondern über den Begriff Tag. Nach dem Anpassen der Schnittstelle funktionierte die Filterfunktion für die Genres.
+
+### Anpassen des responsive Designs:
+Die Webanwendung wurde zunächst für Desktops konzipiert. Da die Anwendung auch auf kleineren Bildschirmen genutzt werden soll, muss das Design auch für diese Bildschirmgrößen angepasst ist und die alle Funktionalitäten auch für diese Geräte gewährleistet sind. In diesem Projekt wurde das Webdesignkonzept "Mobile-First Design" nicht befolgt, dadurch erhöht sich die Komplexität, die für die Gestaltung und Anpassung des Designs von Desktopgröße zur Größe von Bildschirmen mobiler Geräte. 
+
+### Steuerung der Lautstärke über Lautstärketasten
+Eine weitere Überlegung war die Implementierung einer Synchronisation der Lautstärke der Anwendung mit der Lautstärke des Gerätes. Im weiteren sollte die Lautstärke dabei über die Hardware-Lautstärketasten gesteuert werden. Eine direkte Umsetzung von diesem war nicht möglich, da die Synchronisation dieser nicht aufgebaut werden konnte. Die Lautstärkereglung wird daher über einen Lautstärkeregler in der Webanwendung realisiert. 
+
 ## Dateien und Struktur
 
 ### index.html
@@ -129,6 +152,3 @@ Die Audiosteuerung ermöglicht das Abspielen, Pausieren und Anpassen der Lautst�
 
 Viel Spaß beim Hören Ihrer Lieblingsradiosender!
 
-## Vorgehen
-
-## Herausforderung
