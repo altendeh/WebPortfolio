@@ -15,14 +15,44 @@ Der Radio Player ist eine Webanwendung, die es Benutzern ermöglicht, ihre Liebl
 7. **Zurück zur Senderauswahl**: Klicken Sie auf den Zurück-Button, um zur Hauptseite zurückzukehren und einen anderen Sender auszuwählen.
 
 ## Vorgehen
-Zunächst wurde überlegt,welche Funktionalität die Web-Anwendung abbilden soll. Dazu wurden verschiedene Möglichkeite gefunden, die als Web-Anwendung abgebildet werden können. Nach der Entscheidung für einen Radio Player wurden Anforderungen formuliert, damit der Radio Player von Benutzern genutzt werden kann. Dies wurde in Form eines Brainstormings durchgeführt und andere Radio- und Musikanwendungen wurden verglichen. 
-Daraus ergab sich der Aufbau und die Funktionen der Anwendung. Die Anwendung ist in zwei Seiten aufgeteilt. Auf der ersten Seite gibt es die Möglichkeit nach Raiosendern zu suchen oder diese nach einem Genre und Land zu filtern. Als Ausgabe gibt es eine Liste, die die Top 10 Ergebnisse enthält. Durch das Anklicken eines Radiosenders wird die zweite Seite geöffnet, diese bietet Möglichkeiten die Lautstärke anzupassen und das Abspielen zu pausieren. Die Seite enthält Informationen über den Radio Sender, wie das Land, das Genre und enthält ebenfalls falls vorhanden das Icon/Bild des Radiosenders.
-Zudem kann über einen Zurück-Pfeil wieder zur ersten Seite navigiert werden.
-Das sind die grundlegenden Funktionen der Web-Anwendung, die geplant sind.
-Bei der Implementierung wurde die Anwendung zunächst für Desktops programmiert. Es wurden dabei zunächst das Hauptmenü mit den Filter- und Suchfunktionen implementiert. Dazu musste zunächst auch der Abruf der Radiosender in Java Script programmiert werden. Nach der Implementierung der Funktionen wurde der Aufbau der Seite angepasst, damit diese ansprechender für Benutzer ist. Im nächsten Schritt wurden  die Funktionen der zweiten Seite implementiert und das Design angepasst. Nachdem das Grundgerüst der Anwendung gebaut war, wurde ein Dunkel-/Hellmodus eingefügt.
-Bei der ersten Implementierung mussten die Radiosender nach jeder Rückkehr auf die Hauptseite neu geladen werden. Mit Hilfe eines Session Storage wird dieses Problem umgangen,sodass die Radiosender bis zum Ende der Sitzung abgespeichert bleiben.
-Im nächsten wurden Media Queries hinzugefügt, sodass die Anwendung responsive für Geräte mit kleinerem Bildschirm sind.
-Die Dokumentation im Code und im ReadMe wurden während und nach der Arbeit ausgearbeitet.
+
+### 1. Planung und Anforderungen
+Zunächst wurde überlegt, welche Funktionalität die Web-Anwendung abbilden soll. Nach der Entscheidung für einen Radio Player wurden die Anforderungen in einem Brainstorming formuliert und andere Radio- und Musikanwendungen verglichen. Daraus ergaben sich die folgenden Funktionen und der Aufbau der Anwendung.
+
+### 2. Aufbau der Anwendung
+Die Anwendung ist in zwei Seiten aufgeteilt:
+
+- **Seite 1: Radiosender suchen und filtern**
+  - Möglichkeit, nach Radiosendern zu suchen
+  - Filter nach Genre und Land
+  - Ausgabe einer Liste mit den Top 10 Ergebnissen
+
+- **Seite 2: Radiosender abspielen**
+  - Lautstärke anpassen
+  - Abspielen pausieren
+  - Informationen über den Radiosender (Land, Genre, Icon/Bild)
+  - Navigation zurück zur ersten Seite
+
+### 3. Implementierung
+Die Implementierung erfolgte in mehreren Schritten:
+
+1. **Hauptmenü und Suchfunktionen**
+   - Programmierung des Abrufs der Radiosender in JavaScript
+   - Implementierung der Filter- und Suchfunktionen
+
+2. **Seitenaufbau und Design**
+   - Anpassung des Seitenaufbaus für eine ansprechendere Benutzeroberfläche
+   - Implementierung der Funktionen der zweiten Seite und Anpassung des Designs
+
+3. **Zusätzliche Funktionen**
+   - Einfügen eines Dunkel-/Hellmodus
+   - Nutzung von Session Storage, um das erneute Laden der Radiosender nach jeder Rückkehr auf die Hauptseite zu vermeiden
+
+4. **Responsive Design**
+   - Hinzufügen von Media Queries, um die Anwendung für Geräte mit kleineren Bildschirmen responsive zu gestalten
+
+### 4. Dokumentation
+Die Dokumentation im Code und im ReadMe wurde während und nach der Arbeit ausgearbeitet.
 
 ## Herausforderung
 
