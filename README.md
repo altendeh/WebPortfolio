@@ -14,6 +14,9 @@ Der Radio Player ist eine Webanwendung, die es Benutzern ermöglicht, ihre Liebl
 6. **Modus wechseln**: Klicken Sie auf den Modus-Button im Header, um zwischen Hell- und Dunkelmodus zu wechseln.
 7. **Zurück zur Senderauswahl**: Klicken Sie auf den Zurück-Button, um zur Hauptseite zurückzukehren und einen anderen Sender auszuwählen.
 
+
+   Viel Spaß beim Hören Ihrer Lieblingsradiosender!
+
 ## Vorgehen
 
 ### 1. Planung und Anforderungen
@@ -180,6 +183,4 @@ Die Audiosteuerung ermöglicht das Abspielen, Pausieren und Anpassen der Lautst�
 3. **Lautstärkeregler**: Ein Event-Listener wird dem Lautstärkeregler hinzugefügt, um die Lautstärke des Audio-Elements anzupassen.
 4. **Lautstärke-Icon**: Ein Event-Listener wird dem Lautstärke-Icon hinzugefügt, um die Lautstärke stummzuschalten oder wiederherzustellen.
 
-
-Viel Spaß beim Hören Ihrer Lieblingsradiosender!
 
