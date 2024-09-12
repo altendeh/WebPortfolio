@@ -15,6 +15,7 @@ Der Radio Player ist eine Webanwendung, die es Benutzern ermöglicht, ihre Liebl
 7. **Zurück zur Senderauswahl**: Klicken Sie auf den Zurück-Button, um zur Hauptseite zurückzukehren und einen anderen Sender auszuwählen.
 
 
+
    Viel Spaß beim Hören Ihrer Lieblingsradiosender!  
 
 ## Vorgehen
