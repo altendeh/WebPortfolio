@@ -1,80 +1,81 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <!-- Metadaten für die Webseite -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radio Player</title>
-    <meta name="description" content="Listen to your favorite radio stations with our Radio Player.">
-    <meta name="keywords" content="radio, player, music, online radio">
-    <!-- Einbindung der CSS-Datei für das Styling -->
+    <!-- Definiert den Dokumenttyp als HTML5 -->
+    <meta charset="UTF-8"> <!-- Stellt sicher, dass die Webseite den UTF-8 Zeichensatz verwendet -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ermöglicht responsives Design, passt die Breite des Viewports an die Bildschirmbreite des Geräts an -->
+    <title>Radio Player</title> <!-- Titel der Webseite, der im Browser-Tab angezeigt wird -->
+    <meta name="description" content="Listen to your favorite radio stations with our Radio Player."> <!-- Kurzbeschreibung der Webseite für Suchmaschinen -->
+    <meta name="keywords" content="radio, player, music, online radio"> <!-- Schlüsselwörter für Suchmaschinenoptimierung (SEO) -->
+    <!-- Verlinkung der externen CSS-Datei für das Styling der Webseite -->
     <link rel="stylesheet" href="style.css">
-    <!-- Einbindung der Font Awesome Bibliothek für Icons -->
+    <!-- Einbindung der Font Awesome Bibliothek für die Nutzung von Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <header>
-        <!-- Titel und Icon des Radio Players -->
-        <h1><i class="fas fa-radio"></i> Radio Player</h1>
+        <!-- Kopfbereich der Webseite mit Titel und Icon -->
+        <h1><i class="fas fa-radio"></i> Radio Player</h1> <!-- Titel des Radio Players mit einem Radio-Icon -->
         <!-- Button zum Umschalten zwischen Hell- und Dunkelmodus -->
-        <button id="mode-toggle" class="control-button" aria-label="Toggle Light/Dark Mode"></button>
+        <button id="mode-toggle" class="control-button" aria-label="Toggle Light/Dark Mode"></button> <!-- Button ohne Text, nur mit Icon, für die Umschaltung des Modus -->
     </header>
     <main>
+        <!-- Hauptbereich der Webseite -->
         <!-- Container für die Filteroptionen -->
         <div class="filter-container">
             <div class="filter">
                 <!-- Dropdown zur Auswahl des Landes -->
                 <label for="country-select">Wähle ein Land:</label>
                 <select id="country-select" aria-label="Country Select">
-                    <option value="">Alle Länder</option>
-                    <option value="Germany">Deutschland</option>
-                    <option value="United States">USA</option>
-                    <option value="France">Frankreich</option>
-                    <option value="United Kingdom">Vereinigtes Königreich</option>
-                    <option value="Italy">Italien</option>
-                    <option value="Spain">Spanien</option>
-                    <option value="Canada">Kanada</option>
-                    <option value="Australia">Australien</option>
-                    <!-- Weitere Länder hinzufügen -->
+                    <option value="">Alle Länder</option> <!-- Option für alle Länder -->
+                    <option value="Germany">Deutschland</option> <!-- Option für Deutschland -->
+                    <option value="United States">USA</option> <!-- Option für USA -->
+                    <option value="France">Frankreich</option> <!-- Option für Frankreich -->
+                    <option value="United Kingdom">Vereinigtes Königreich</option> <!-- Option für Vereinigtes Königreich -->
+                    <option value="Italy">Italien</option> <!-- Option für Italien -->
+                    <option value="Spain">Spanien</option> <!-- Option für Spanien -->
+                    <option value="Canada">Kanada</option> <!-- Option für Kanada -->
+                    <option value="Australia">Australien</option> <!-- Option für Australien -->
+                    <!-- Weitere Länder können hier hinzugefügt werden -->
                 </select>
             </div>
             <div class="filter">
                 <!-- Dropdown zur Auswahl des Genres -->
                 <label for="tag-select">Wähle ein Genre:</label>
                 <select id="tag-select" aria-label="Tag Select">
-                    <option value="">Alle Genres</option>
-                    <option value="rock">Rock</option>
-                    <option value="jazz">Jazz</option>
-                    <option value="pop">Pop</option>
-                    <option value="classical">Klassik</option>
-                    <option value="hip-hop">Hip-Hop</option>
-                    <option value="electronic">Elektronisch</option>
-                    <option value="country">Country</option>
-                    <option value="reggae">Reggae</option>
-                    <!-- Weitere Genres hinzufügen -->
+                    <option value="">Alle Genres</option> <!-- Option für alle Genres -->
+                    <option value="rock">Rock</option> <!-- Option für Rock -->
+                    <option value="jazz">Jazz</option> <!-- Option für Jazz -->
+                    <option value="pop">Pop</option> <!-- Option für Pop -->
+                    <option value="classical">Klassik</option> <!-- Option für Klassik -->
+                    <option value="hip-hop">Hip-Hop</option> <!-- Option für Hip-Hop -->
+                    <option value="electronic">Elektronisch</option> <!-- Option für Elektronisch -->
+                    <option value="country">Country</option> <!-- Option für Country -->
+                    <option value="reggae">Reggae</option> <!-- Option für Reggae -->
+                    <!-- Weitere Genres können hier hinzugefügt werden -->
                 </select>
             </div>
             <div class="filter">
                 <!-- Suchfeld zur Eingabe des Radiosendernamens -->
                 <label for="search-input">Suche nach Radiosender:</label>
-                <input type="text" id="search-input" placeholder="Radiosender eingeben..." aria-label="Search Input">
+                <input type="text" id="search-input" placeholder="Radiosender eingeben..." aria-label="Search Input"> <!-- Eingabefeld für die Suche nach Radiosendern -->
             </div>
             <!-- Suchbutton -->
-            <button id="search-button" aria-label="Search Button"><i class="fas fa-search"></i> Suchen</button>
+            <button id="search-button" aria-label="Search Button"><i class="fas fa-search"></i> Suchen</button> <!-- Button zum Starten der Suche -->
         </div>
         <!-- Ladeanzeige -->
         <div id="loading" class="hidden">
-            <div class="spinner" aria-label="Loading Spinner"></div>
-            <p>Lade Radiosender...</p>
+            <div class="spinner" aria-label="Loading Spinner"></div> <!-- Spinner-Icon zur Anzeige des Ladestatus -->
+            <p>Lade Radiosender...</p> <!-- Text zur Anzeige des Ladestatus -->
         </div>
         <!-- Liste der Radiosender -->
-        <div id="radio-list" class="hidden" aria-label="Radio List"></div>
+        <div id="radio-list" class="hidden" aria-label="Radio List"></div> <!-- Container für die Liste der Radiosender -->
     </main>
     <footer>
-        <!-- Fußzeile mit Copyright-Informationen -->
-        <p>2024 Radio Player.</p>
+        <!-- Fußzeile der Webseite -->
+        <p>2024 Radio Player.</p> <!-- Anwendungs-Informationen -->
     </footer>
-    <!-- Einbindung der JavaScript-Datei für die Funktionalität -->
+    <!-- Einbindung der externen JavaScript-Datei für die Funktionalität der Webseite -->
     <script src="script.js"></script>
 </body>
 </html>

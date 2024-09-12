@@ -1,53 +1,54 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <!-- Metadaten für die Webseite -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radio Player - Detail</title>
-    <meta name="description" content="Listen to your favorite radio stations with our Radio Player.">
-    <meta name="keywords" content="radio, player, music, online radio">
-    <!-- Einbindung der CSS-Datei für das Styling -->
+    <!-- Definiert den Dokumenttyp als HTML5 -->
+    <meta charset="UTF-8"> <!-- Stellt sicher, dass die Webseite den UTF-8 Zeichensatz verwendet -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ermöglicht responsives Design, passt die Breite des Viewports an die Bildschirmbreite des Geräts an -->
+    <title>Radio Player - Detail</title> <!-- Titel der Webseite, der im Browser-Tab angezeigt wird -->
+    <meta name="description" content="Listen to your favorite radio stations with our Radio Player."> <!-- Kurzbeschreibung der Webseite für Suchmaschinen -->
+    <meta name="keywords" content="radio, player, music, online radio"> <!-- Schlüsselwörter für Suchmaschinenoptimierung (SEO) -->
+    <!-- Verlinkung der externen CSS-Datei für das Styling der Webseite -->
     <link rel="stylesheet" href="style.css">
-    <!-- Einbindung der Font Awesome Bibliothek für Icons -->
+    <!-- Einbindung der Font Awesome Bibliothek für die Nutzung von Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <header>
-        <!-- Titel und Icon des Radio Players -->
-        <h1><i class="fas fa-radio"></i> Radio Player</h1>
+        <!-- Kopfbereich der Webseite mit Titel und Icon -->
+        <h1><i class="fas fa-radio"></i> Radio Player</h1> <!-- Titel des Radio Players mit einem Radio-Icon -->
         <!-- Button zum Umschalten zwischen Hell- und Dunkelmodus -->
-        <button id="mode-toggle" class="control-button" aria-label="Toggle Light/Dark Mode"></button>
+        <button id="mode-toggle" class="control-button" aria-label="Toggle Light/Dark Mode"></button> <!-- Button ohne Text, nur mit Icon, für die Umschaltung des Modus -->
     </header>
     
     <main>
+        <!-- Hauptbereich der Webseite -->
         <!-- Box zur Anzeige der Informationen des ausgewählten Radiosenders -->
         <div class="song-info-box">
-            <img id="selected-radio-icon" class="radio-icon" alt="Radio Icon" aria-label="Radio Icon">
-            <h2 id="selected-radio-name" aria-label="Radio Name"></h2>
-            <p id="selected-radio-country" aria-label="Radio Country"></p>
-            <p id="selected-radio-genre" aria-label="Radio Genre"></p>
+            <img id="selected-radio-icon" class="radio-icon" alt="Radio Icon" aria-label="Radio Icon"> <!-- Platzhalter für das Icon des ausgewählten Radiosenders -->
+            <h2 id="selected-radio-name" aria-label="Radio Name"></h2> <!-- Platzhalter für den Namen des ausgewählten Radiosenders -->
+            <p id="selected-radio-country" aria-label="Radio Country"></p> <!-- Platzhalter für das Land des ausgewählten Radiosenders -->
+            <p id="selected-radio-genre" aria-label="Radio Genre"></p> <!-- Platzhalter für das Genre des ausgewählten Radiosenders -->
         </div>
         <!-- Steuerungselemente für die Audiowiedergabe -->
         <div class="audio-controls">
-            <button id="play-button" class="control-button" aria-label="Play Button"><i class="fas fa-play"></i></button>
+            <button id="play-button" class="control-button" aria-label="Play Button"><i class="fas fa-play"></i></button> <!-- Wiedergabe-Button mit Play-Icon -->
             <label for="volume-slider" class="control-label">
-                <i id="volume-icon" class="fas fa-volume-up"></i>
+                <i id="volume-icon" class="fas fa-volume-up"></i> <!-- Lautstärke-Icon -->
             </label>
-            <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1" class="control-slider" aria-label="Volume Slider">
-            <span id="volume-level">100%</span>
+            <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1" class="control-slider" aria-label="Volume Slider"> <!-- Lautstärkeregler mit einem Bereich von 0 bis 1 in Schritten von 0.01 -->
+            <span id="volume-level">100%</span> <!-- Anzeige der aktuellen Lautstärke in Prozent -->
         </div>
         <!-- Button zur Rückkehr zur Senderauswahl -->
         <button id="back-button" class="back-button" aria-label="Back Button">
-            <i class="fas fa-arrow-left"></i>
-            <span class="back-text">Zurück zur Senderauswahl</span>
+            <i class="fas fa-arrow-left"></i> <!-- Zurück-Icon -->
+            <span class="back-text">Zurück zur Senderauswahl</span> <!-- Text für den Zurück-Button -->
         </button>
     </main>
     <footer>
-        <!-- Fußzeile mit Copyright-Informationen -->
-        <p>2024 Radio Player.</p>
+        <!-- Fußzeile der Webseite -->
+        <p>2024 Radio Player.</p> <!-- Anwendungs-Informationen -->
     </footer>    
-    <!-- Einbindung der JavaScript-Datei für die Funktionalität -->
+    <!-- Einbindung der externen JavaScript-Datei für die Funktionalität der Webseite -->
     <script src="radio.js"></script>
 </body>
 </html>
