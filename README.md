@@ -184,3 +184,35 @@ Die Audiosteuerung ermöglicht das Abspielen, Pausieren und Anpassen der Lautst�
 4. **Lautstärke-Icon**: Ein Event-Listener wird dem Lautstärke-Icon hinzugefügt, um die Lautstärke stummzuschalten oder wiederherzustellen.
 
 
+### API-Details
+
+Die Radio Player-Anwendung nutzt die Radio Browser API, um Radiosender abzurufen. Diese API bietet eine Vielzahl von Endpunkten, um Radiosender nach verschiedenen Kriterien zu suchen und zu filtern.
+
+#### Wichtige Endpunkte
+
+- **Top bewertete Sender:**
+  - **URL:** `https://de1.api.radio-browser.info/json/stations/topvote`
+  - **Beschreibung:** Ruft die am besten bewerteten Radiosender ab.
+
+- **Sender nach Name suchen:**
+  - **URL:** `https://de1.api.radio-browser.info/json/stations/search?name={searchTerm}`
+  - **Beschreibung:** Sucht nach Radiosendern, deren Name den Suchbegriff enthält.
+  - **Beispiel:** `https://de1.api.radio-browser.info/json/stations/search?name=rock`
+
+- **Sender nach Land filtern:**
+  - **URL:** `https://de1.api.radio-browser.info/json/stations/bycountry/{country}`
+  - **Beschreibung:** Ruft Radiosender aus einem bestimmten Land ab.
+  - **Beispiel:** `https://de1.api.radio-browser.info/json/stations/bycountry/Germany`
+
+- **Sender nach Genre filtern:**
+  - **URL:** `https://de1.api.radio-browser.info/json/stations/bytag/{tag}`
+  - **Beschreibung:** Ruft Radiosender eines bestimmten Genres ab.
+  - **Beispiel:** `https://de1.api.radio-browser.info/json/stations/bytag/pop`
+
+- **Sender nach Land und Genre filtern:**
+  - **URL:** `https://de1.api.radio-browser.info/json/stations/search?country={country}&tag={tag}`
+  - **Beschreibung:** Sucht nach Radiosendern, die sowohl das Land als auch das Genre erfüllen.
+  - **Beispiel:** `https://de1.api.radio-browser.info/json/stations/search?country=Germany&tag=rock`
+
+
+
