@@ -213,6 +213,52 @@ Die Radio Player-Anwendung nutzt die Radio Browser API, um Radiosender abzurufen
   - **URL:** `https://de1.api.radio-browser.info/json/stations/search?country={country}&tag={tag}`
   - **Beschreibung:** Sucht nach Radiosendern, die sowohl das Land als auch das Genre erfüllen.
   - **Beispiel:** `https://de1.api.radio-browser.info/json/stations/search?country=Germany&tag=rock`
+ 
 
+### Font Awesome Bibliothek
 
+**Font Awesome** ist eine beliebte Bibliothek, die eine Vielzahl von Icons zur Verfügung stellt, die in Webprojekten verwendet werden können. Diese Icons sind skalierbar und können leicht angepasst werden, um den Stil und das Design der Webseite zu ergänzen.
 
+#### Einbindung in das Projekt
+
+In den HTML-Dokumenten wird Font Awesome über ein CDN (Content Delivery Network) eingebunden. Dies geschieht durch das Hinzufügen des folgenden `<link>`-Tags im `<head>`-Bereich des Dokuments:
+
+```html
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+```
+
+#### Verwendung von Icons
+
+Nach der Einbindung der Bibliothek können Icons in deinem HTML-Dokument verwendet werden, indem du die entsprechenden Klassen hinzufügst. Zum Beispiel:
+
+```html
+<i class="fas fa-radio"></i>
+```
+
+In diesem Beispiel wird das Radio-Icon von Font Awesome verwendet. Die Klasse `fas` steht für “Font Awesome Solid”, und `fa-radio` ist der spezifische Name des Icons.
+
+#### Vorteile der Verwendung von Font Awesome:
+
+- **Vielfalt an Icons**: Font Awesome bietet eine große Auswahl an Icons für verschiedene Anwendungsfälle.
+
+- **Skalierbarkeit**: Icons sind vektorbasiert und können ohne Qualitätsverlust skaliert werden.
+
+- **Einfache Integration**: Icons können einfach durch Hinzufügen von Klassen in HTML-Elemente integriert werden.
+
+- **Anpassbarkeit**: Icons können durch CSS leicht angepasst werden, um Farbe, Größe und andere Stileigenschaften zu ändern.
+
+#### Beispiel
+
+Hier ist ein Beispiel, wie ein Icon in einem Button verwendet wird:
+
+```html
+<button>
+  <i class="fas fa-adjust"></i> Umschalten
+</button>
+```
+
+In diesem Beispiel wird das `fa-adjust` Icon von Font Awesome verwendet, um einen Button zu erstellen, der zwischen Hell- und Dunkelmodus umschaltet.
+
+#### Weitere Informationen
+
+Weitere Informationen und eine vollständige Liste der verfügbaren Icons findest du auf der offiziellen Font Awesome Webseite.
