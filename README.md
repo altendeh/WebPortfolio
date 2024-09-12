@@ -21,7 +21,8 @@ Zudem kann über einen Zurück-Pfeil wieder zur ersten Seite navigiert werden.
 Das sind die grundlegenden Funktionen der Web-Anwendung, die geplant sind.
 Bei der Implementierung wurde die Anwendung zunächst für Desktops programmiert. Es wurden dabei zunächst das Hauptmenü mit den Filter- und Suchfunktionen implementiert. Dazu musste zunächst auch der Abruf der Radiosender in Java Script programmiert werden. Nach der Implementierung der Funktionen wurde der Aufbau der Seite angepasst, damit diese ansprechender für Benutzer ist. Im nächsten Schritt wurden  die Funktionen der zweiten Seite implementiert und das Design angepasst. Nachdem das Grundgerüst der Anwendung gebaut war, wurde ein Dunkel-/Hellmodus eingefügt.
 Bei der ersten Implementierung mussten die Radiosender nach jeder Rückkehr auf die Hauptseite neu geladen werden. Mit Hilfe eines Session Storage wird dieses Problem umgangen,sodass die Radiosender bis zum Ende der Sitzung abgespeichert bleiben.
-Im letzen Schritt wurden Media Queries hinzugefügt, sodass die Anwendung responsive für Geräte mit kleinerem Bildschirm sind.
+Im nächsten wurden Media Queries hinzugefügt, sodass die Anwendung responsive für Geräte mit kleinerem Bildschirm sind.
+Die Dokumentation im Code und im ReadMe wurden während und nach der Arbeit ausgearbeitet.
 
 ## Herausforderung
 
