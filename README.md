@@ -6,7 +6,7 @@ Der Radio Player ist eine Webanwendung, die es Benutzern ermöglicht, ihre Liebl
 
 ## Anleitung zur Nutzung des Radio Players
 
-1. **Startseite aufrufen**: Öffnen Sie die `index.html`-Datei in einem Webbrowser oder den folgenden Link: `https://altendeh.github.io/WebPortfolio/index.html`.
+1. **Startseite aufrufen**: Öffnen Sie die `index.html`-Datei in einem Webbrowser oder den folgenden Link: https://altendeh.github.io/WebPortfolio/index.html .
 2. **Radiosender filtern**: Wählen Sie ein Land und/oder ein Genre aus den Dropdown-Menüs aus oder geben Sie den Namen eines Radiosenders in das Suchfeld ein.
 3. **Radiosender suchen**: Klicken Sie auf den Suchbutton oder drücken Sie die Eingabetaste, um die Suche zu starten.
 4. **Radiosender auswählen**: Klicken Sie auf einen Radiosender in der Liste, um zur Detailseite zu gelangen.
