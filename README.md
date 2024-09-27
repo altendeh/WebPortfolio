@@ -259,6 +259,4 @@ Hier ist ein Beispiel, wie ein Icon in einem Button verwendet wird:
 
 In diesem Beispiel wird das `fa-adjust` Icon von Font Awesome verwendet, um einen Button zu erstellen, der zwischen Hell- und Dunkelmodus umschaltet.
 
-#### Weitere Informationen
 
-Weitere Informationen und eine vollständige Liste der verfügbaren Icons findest du auf der offiziellen Font Awesome Webseite.
